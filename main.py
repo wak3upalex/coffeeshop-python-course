@@ -1,6 +1,11 @@
-def main():
-    print("Hello from coffeeshop-python-course!")
+import logging
 
+from fastapi import FastAPI
 
-if __name__ == "__main__":
-    main()
+from app.api.orders import router as orders_router
+from app.core.config import settings
+
+logging.basicConfig(level=logging.INFO)
+
+app = FastAPI(title=settings.app_name)
+app.include_router(orders_router)
