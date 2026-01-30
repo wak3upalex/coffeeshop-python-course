@@ -1,7 +1,7 @@
 # coffeeshop-python-course
 
 
-Закза в Кофейне (взятая бизнес-тематика) с использованием FastAPI, PostgreSQL, RabbitMQ, и Prometheus.
+Заказ в Кофейне (взятая бизнес-тематика) с использованием FastAPI, PostgreSQL, RabbitMQ, и Prometheus.
 
 ## Быстрый запуск через Docker
 
