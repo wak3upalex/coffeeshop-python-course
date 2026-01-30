@@ -5,22 +5,23 @@ from app.models.order import Order
 
 
 class OrderRepository:
-    '''Репозиторий для работы с заказами.
+    """Репозиторий для работы с заказами.
 
     Инкапсуляция CRUD операций для Order на уровне базы данных (БД).
 
     Args:
         db (Session): Активная сессия SQLAlchemy
-    '''
+    """
+
     def __init__(self, db: Session) -> None:
         self.db = db
 
     def create(self, customer_name: str, item: str) -> Order:
         """Создаёт заказ и сохраняет в БД.
-        
+
         Args:
             customer_name: имя клиента
-            item: нащвание позиции. 
+            item: нащвание позиции.
 
         Returns:
             Order: созданный заказ с заполненным идентификатором

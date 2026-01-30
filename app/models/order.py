@@ -18,6 +18,7 @@ class Order(Base):
         status (str): Текущий статус заказа. По умолчанию "created".
         created_at (datetime): Дата и время создания заказа.
     """
+
     __tablename__ = "orders"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
