@@ -1,8 +1,9 @@
+from sqlalchemy.orm import Session
+
 from app.models.order import Order
 from app.repositories.orders import OrderRepository
 from app.services.events import order_created_event
 from app.services.queue import publish_event
-from sqlalchemy.orm import Session
 
 
 class OrderService:

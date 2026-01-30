@@ -16,7 +16,7 @@ class Order(Base):
         customer_name (str): Имя клиента, оформившего заказ.
         item (str): Название позиции заказа.
         status (str): Текущий статус заказа. По умолчанию "created".
-        created_at (datetime): Дата и время создания заказа (временная зона поддерживается).
+        created_at (datetime): Дата и время создания заказа.
     """
     __tablename__ = "orders"
 
