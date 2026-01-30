@@ -10,7 +10,10 @@ COPY app /app/app
 COPY alembic /app/alembic
 COPY alembic.ini /app/alembic.ini
 
-RUN uv sync --system --no-dev --locked
+RUN uv sync --no-dev --locked
+
+ENV VIRTUAL_ENV=/app/.venv
+ENV PATH="/app/.venv/bin:$PATH"
 
 ENV PYTHONUNBUFFERED=1
 

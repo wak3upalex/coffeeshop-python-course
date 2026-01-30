@@ -9,7 +9,10 @@ COPY uv.lock /app/uv.lock
 COPY app /app/app
 COPY consumer /app/consumer
 
-RUN uv sync --system --no-dev --locked
+RUN uv sync --no-dev --locked
+
+ENV VIRTUAL_ENV=/app/.venv
+ENV PATH="/app/.venv/bin:$PATH"
 
 ENV PYTHONUNBUFFERED=1
 
